@@ -1,0 +1,107 @@
+@import "flex.scss";
+@import "color.scss";
+@import "fonts.scss";
+@import "config.scss";
+@import "responsive.scss";
+@import "text.scss";
+//@import "reset.scss";
+//@import "links.scss";
+
+
+@media( max-width: 600px){
+    .mob-nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mob-foot{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+	    align-items: center;
+    }
+
+    .remove{
+        display: none;
+    }
+}
+
+body{
+    background: #EBF4FA;
+}
+
+.App{
+    background: gray-goose;
+}
+
+.box{
+    padding: 0px 15px ;
+    margin: 0px 10px ;
+}
+
+.title{
+    line-height: normal;
+}
+
+.israel{
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../img/Iflag.png")  center center no-repeat;
+}
+
+.canada{
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../img/flag-of-canada.png")  center center no-repeat;
+}
+
+header{
+    position: relative;
+    display: block;
+    width: 100%;
+    background: $blue-ice;
+    color: $white;
+    height: 90px;
+
+    .logo{
+        position: absolute;
+        top: 50%; left: 15px;
+        @include translateY(-50%);
+        a {
+            font-size: 20px;
+            line-height: normal;
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
+    nav,
+    nav ul,
+    nav ui li {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav{
+        position: absolute;
+        top: 50%; right: 15px;
+        @include translateY(-50%);
+    }
+
+    ul li {
+        list-style-type: none;
+        display: inline-block;
+        margin-right: 15px;
+
+        &.last {
+            margin: 0;
+        }
+
+        a {
+            font-size: 20px;
+            line-height: normal;
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
+
+footer{
+    background: $blue-ice;
+}
